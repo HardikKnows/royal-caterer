@@ -1,3 +1,4 @@
+// src/app/api/leads/[id]/route.ts
 import { NextResponse } from "next/server";
 import { connectDB } from "../../../../../lib/db";
 import Lead from "../../../../../models/Lead";
@@ -7,18 +8,23 @@ export async function PATCH(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { status } = await req.json();
-
     await connectDB();
-    const lead = await Lead.findByIdAndUpdate(
+
+    const body = await req.json();
+    const { status } = body;
+
+    const updated = await Lead.findByIdAndUpdate(
       params.id,
       { status },
       { new: true }
     );
 
-    return NextResponse.json({ success: true, lead });
-  } catch (err) {
-    console.error("Update lead status error:", err);
-    return NextResponse.json({ success: false }, { status: 500 });
+    return NextResponse.json({ success: true, lead: updated });
+  } catch (error) {
+    console.error("PATCH /api/leads/[id] error:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to update lead" },
+      { status: 500 }
+    );
   }
 }

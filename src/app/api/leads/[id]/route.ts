@@ -4,17 +4,17 @@ import { connectDB } from "../../../../../lib/db";
 import Lead from "../../../../../models/Lead";
 
 export async function PATCH(
-  req: Request,
-  { params }: { params: { id: string } }
+  request: Request,
+  context: { params: { id: string } }
 ) {
   try {
     await connectDB();
 
-    const body = await req.json();
-    const { status } = body;
+    const { id } = context.params;
+    const { status } = await request.json();
 
     const updated = await Lead.findByIdAndUpdate(
-      params.id,
+      id,
       { status },
       { new: true }
     );

@@ -1,16 +1,16 @@
 // src/app/api/leads/[id]/route.ts
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { connectDB } from "../../../../../lib/db";
 import Lead from "../../../../../models/Lead";
 
 export async function PATCH(
-  request: Request,
-  { params }: { params: { id: string } }
+  request: NextRequest,
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectDB();
 
-    const { id } = params;
+    const { id } = await context.params; // 👈 await params (Promise)
     const { status } = await request.json();
 
     const updated = await Lead.findByIdAndUpdate(

@@ -5,12 +5,12 @@ import Lead from "../../../../../models/Lead";
 
 export async function PATCH(
   request: Request,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
   try {
     await connectDB();
 
-    const { id } = context.params;
+    const { id } = params;
     const { status } = await request.json();
 
     const updated = await Lead.findByIdAndUpdate(

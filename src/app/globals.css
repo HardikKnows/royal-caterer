@@ -3,6 +3,39 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', sans-serif;
+
+}
+.hero-title {
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;          /* slimmer than 800 */
+  letter-spacing: 0.02em;   /* subtle, not shouty */
+  text-transform: none;     /* keeps it classy, less aggressive */
+  line-height: 1.15;
+}
+.hero-title {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    letter-spacing: 0.2em;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.1em;
+  }
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.85;
+  text-align: center;
 }
 
 @theme inline {
@@ -17,6 +50,9 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+.input {
+  @apply w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/50;
 }
 
 body {

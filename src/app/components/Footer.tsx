@@ -1,4 +1,6 @@
 // components/Footer.tsx
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { SiZomato } from "react-icons/si";
 import Link from "next/link";
 
 export default function Footer({ onPlanEvent }: { onPlanEvent: () => void }) {
@@ -28,9 +30,65 @@ export default function Footer({ onPlanEvent }: { onPlanEvent: () => void }) {
         {/* Contact + Map */}
         <div>
           <h4 className="font-semibold text-white mb-2 sm:mb-3">Contact</h4>
-          <ul className="space-y-1.5 sm:space-y-2 text-sm mb-3 sm:mb-4">
-            <li>📞 +91 9818867732</li>
-            <li>📧 royaltcpl@gmail.com</li>
+          
+<ul className="space-y-1.5 sm:space-y-2 text-sm mb-3 sm:mb-4">
+
+<li>
+  <a
+    href="tel:+919818867732"
+    className="hover:text-yellow-400 transition"
+  >
+    📞 +91 9818867732
+  </a>
+</li>
+
+<li>
+  <a
+    href="tel:+919818513368"
+    className="hover:text-yellow-400 transition"
+  >
+    📞 +91 9818513368
+  </a>
+</li>
+
+<li>
+  <a
+    href="mailto:royaltcpl@gmail.com"
+    className="hover:text-yellow-400 transition"
+  >
+    📧 royaltcpl@gmail.com
+  </a>
+</li>
+            <div className="mt-4">
+  <div className="flex gap-4">
+    <a
+      href="https://www.instagram.com/royaltourismandcaterer"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-pink-500 transition"
+    >
+      <FaInstagram size={30} />
+    </a>
+
+    <a
+      href="https://www.facebook.com/royalcaterer.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-blue-600 transition"
+    >
+      <FaFacebookF size={30} />
+    </a>
+
+    <a
+      href="http://zoma.to/r/22456441"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-red-500 transition"
+    >
+      <SiZomato size={40} />
+    </a>
+  </div>
+</div>
             <li>📍 Inside Bhalswa Golf Course, Delhi</li>
           </ul>
 

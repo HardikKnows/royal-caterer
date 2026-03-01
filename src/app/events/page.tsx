@@ -9,13 +9,16 @@ declare global {
 }
 
 const VENUE_CAPACITY: Record<string, number> = {
+  party_lawn : 2000,
   hazard_lounge: 200,
   eagle_nest: 25,
   skyball: 200,
   restaurant_bar: 100,
+
 };
 
 const VENUE_LABEL: Record<string, string> = {
+  party_lawn : "Party Lawn (200+)",
   hazard_lounge: "Hazard Lounge (Up to 200)",
   eagle_nest: "Eagle Nest (Up to 25)",
   skyball: "Skyball – Terrace (Up to 200)",
@@ -161,10 +164,15 @@ export default function EventsPage() {
               required
             >
               <option value="">Select</option>
-              <option>Birthday Party</option>
-              <option>Corporate Event</option>
-              <option>Private Party</option>
-              <option>Golf Day Event</option>
+              <option>Reception Party</option>
+            <option>Corporate Event</option>
+            <option>Marriage Anniversary</option>
+            <option>Haldi/Mehndi Function</option>
+            <option>Cultural Events</option>
+            <option>Birthday Party</option> 
+            <option>Golf Tournament</option>
+            <option>Kitty Party</option>
+            <option>others</option>
             </select>
           </div>
 

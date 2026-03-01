@@ -158,6 +158,7 @@ City: ${form.city}`;
 
           <select className="input" name="venue" value={form.venue} onChange={handleChange} required>
             <option value="">Select Venue *</option>
+            <option value="Party_lawn">Party Lawn (200+)</option>
             <option value="hazard_lounge">Hazard Lounge (Up to 200)</option>
             <option value="eagle_nest">Eagle Nest (Up to 25)</option>
             <option value="skyball">Skyball – Terrace (Up to 200)</option>
@@ -172,10 +173,15 @@ City: ${form.city}`;
 
           <select className="input" name="eventType" value={form.eventType} onChange={handleChange} required>
             <option value="">Event Type *</option>
-            <option>Wedding</option>
-            <option>Corporate</option>
-            <option>Birthday</option>
-            <option>Private Party</option>
+            <option>Reception Party</option>
+            <option>Corporate Event</option>
+            <option>Marriage Anniversary</option>
+            <option>Haldi/Mehndi Function</option>
+            <option>Cultural Events</option>
+            <option>Birthday Party</option> 
+            <option>Golf Tournament</option>
+            <option>Kitty Party</option>
+            <option>others</option>
           </select>
 
           <input

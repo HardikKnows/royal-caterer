@@ -7,14 +7,14 @@ import { DirectorsMessage } from "./components/DirectorsMessage";
 import {ClientTestimonials } from "./components/ClientTestimonials"
 import { OurClientsPreview  } from "./components/OurClientsPreview"
 import GallerySection from "./components/GallerySection";
-
+import FloatingSocials from "./components/FloatingSocials";
 
 
 
 export default function Home() {
   return (
     <>
-
+<FloatingSocials />
       <Services/>
       <ExperienceSection />
       <MenuSection/>

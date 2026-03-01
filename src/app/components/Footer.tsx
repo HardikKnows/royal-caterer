@@ -1,5 +1,6 @@
 // components/Footer.tsx
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiZomato } from "react-icons/si";
 import Link from "next/link";
 
@@ -87,6 +88,14 @@ export default function Footer({ onPlanEvent }: { onPlanEvent: () => void }) {
     >
       <SiZomato size={40} />
     </a>
+    <a
+  href="https://x.com/royal96180"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 hover:text-white transition"
+>
+  <FaXTwitter size={40} />
+</a>
   </div>
 </div>
             <li>📍 Inside Bhalswa Golf Course, Delhi</li>

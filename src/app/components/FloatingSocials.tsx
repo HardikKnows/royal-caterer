@@ -12,7 +12,7 @@ export default function FloatingSocials() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center 
-        rounded-full bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 
+        rounded-full bg-linear-to-tr from-pink-500 via-red-500 to-yellow-500 
         text-white shadow-lg hover:scale-110 transition duration-300"
       >
         <FaInstagram size={18} />

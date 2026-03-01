@@ -16,8 +16,7 @@ export default function Navbar({ onPlanEvent }: NavbarProps) {
         {/* Brand / Logo */}
         <Link
           href="/"
-          className="font-semibold text-lg sm:text-xl tracking-wide hover:opacity-80 transition"
-        >
+          className="font-semibold text-lg sm:text-xl tracking-wide text-black hover:text-yellow-500 transition"        >
           Royal Tourism & Caterer
         </Link>
 
